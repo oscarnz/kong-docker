@@ -1,0 +1,23 @@
+ _format_version: "3.0"
+ _transform: true
+
+ services:
+ - host: httpbin.org
+   name: example_service
+   port: 80
+   protocol: http
+   routes:
+   - name: example_route
+     paths:
+     - /mock
+     strip_path: true
+
+ - host: host.docker.internal
+   port: 7001
+   name: sb-service
+   protocol: http
+   routes:
+   - name: sb-service
+     paths:
+     - /api
+     strip_path: true
