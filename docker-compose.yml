@@ -52,8 +52,8 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
-  fastapi:
-    build: service-1/
+  chabot:
+    build: chat-svc/  #should use ecr container link
     networks:
       - kong-net
     ports: 
